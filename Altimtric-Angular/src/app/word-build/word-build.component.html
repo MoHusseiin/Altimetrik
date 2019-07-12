@@ -1,0 +1,25 @@
+<div class="form-group">
+    <input type="text"
+           class="form-control"
+           placeholder="phase"
+           (keyup)="getPhase($event)"
+           />
+
+    <input type="text"
+           class="form-control"
+           placeholder="length"
+           (keyup)="getLegth($event)"/>
+</div>
+<button (click)="onClickMe()">Word Builder!</button>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group">
+            <li *ngFor="let word of words" class="list-group-item" >
+                <div class="task-checkbox">
+                    <span ngClass="{name completed}}">{{ word }}</span>
+                </div>
+            </li>
+          </ul>
+    </div>
+</div>
+
